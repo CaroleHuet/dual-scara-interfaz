@@ -753,7 +753,7 @@ class Window(QtWidgets.QMainWindow):
                                     signed=True).hex()
             q2 = int(point[1]).to_bytes(length=4, byteorder='big',
                                     signed=True).hex()
-            frame = 'S:,' + q1 + ',' + q2 + '\r\n'
+            frame = ':S,' + q1 + ',' + q2 + '\r\n'
             print(frame)
             self.serialSendstr.emit(frame)
                    
